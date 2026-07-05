@@ -316,6 +316,7 @@ body::before {
 
 .education-card,
 .about-card,
+.focus-card,
 .skills-card {
   margin-top: 24px;
   padding: 26px;
@@ -323,6 +324,37 @@ body::before {
   border: 1px solid var(--border);
   border-radius: 28px;
   box-shadow: 0 22px 48px rgba(17, 45, 78, 0.06);
+}
+
+.focus-intro {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.focus-item {
+  padding: 18px;
+  border-radius: 20px;
+  background: #f8faff;
+  border: 1px solid rgba(17, 45, 78, 0.08);
+}
+
+.focus-item h3 {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+.focus-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .education-table-wrap {
@@ -565,6 +597,7 @@ td {
 
   .education-card,
   .about-card,
+  .focus-card,
   .skills-card,
   .highlights-section {
     margin-top: 16px;
