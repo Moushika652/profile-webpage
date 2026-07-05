@@ -492,47 +492,6 @@ td {
   }
 }
 
-@media (max-width: 1080px) {
-  .app-shell {
-    grid-template-columns: 1fr;
-    padding: 16px;
-  }
-
-  .side-panel {
-    position: relative;
-    top: 0;
-    width: 100%;
-    max-width: none;
-    min-height: auto;
-    margin-bottom: 24px;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-photo {
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .photo-frame {
-    max-width: 320px;
-  }
-
-  .profile-meta {
-    grid-template-columns: 1fr;
-  }
-
-  .education-card,
-  .about-card,
-  .skills-card,
-  .highlights-section {
-    margin-left: 0;
-  }
-}
-
 @media (max-width: 720px) {
   .app-shell {
     padding: 14px;
@@ -580,15 +539,13 @@ td {
   }
 
   .main-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
     padding-top: 12px;
   }
 
   .main-nav a {
-    flex: 1 1 calc(50% - 10px);
-    width: auto;
+    width: 100%;
     padding: 10px 12px;
   }
 
