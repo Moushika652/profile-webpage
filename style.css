@@ -492,68 +492,9 @@ td {
   }
 }
 
-@media (max-width: 720px) {
-  .hero {
-    padding: 22px;
-  }
-
-  .hero-summary {
-    max-width: 100%;
-  }
-
-  .main-nav a {
-    width: 100%;
-    padding: 12px 14px;
-  }
-
-  .profile-meta {
-    gap: 12px;
-  }
-
-  .section-head h2 {
-    font-size: 1.6rem;
-  }
-
-  .skills-list {
-    gap: 8px;
-  }
-
-  .photo-frame {
-    width: 240px;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 1080px) {
   .app-shell {
-    padding: 12px;
-  }
-
-  .side-panel {
-    padding: 20px;
-  }
-
-  .hero {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .button,
-  .button-secondary {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .photo-frame {
-    width: 200px;
-  }
-}
-
-@media (max-width: 960px) {
-  .app-shell {
-    display: block;
+    grid-template-columns: 1fr;
     padding: 16px;
   }
 
@@ -561,6 +502,8 @@ td {
     position: relative;
     top: 0;
     width: 100%;
+    max-width: none;
+    min-height: auto;
     margin-bottom: 24px;
   }
 
@@ -591,8 +534,66 @@ td {
 }
 
 @media (max-width: 720px) {
-  .main-nav {
+  .app-shell {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .side-panel {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 20px;
+    gap: 22px;
+  }
+
+  .hero-copy,
+  .hero-photo {
     width: 100%;
+  }
+
+  .hero-photo {
+    order: -1;
+    justify-content: center;
+  }
+
+  .photo-frame {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+
+  .hero-summary {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .button,
+  .button-secondary {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 12px;
+  }
+
+  .main-nav a {
+    flex: 1 1 calc(50% - 10px);
+    width: auto;
+    padding: 10px 12px;
+  }
+
+  .profile-meta {
+    gap: 12px;
   }
 
   .education-card,
@@ -600,56 +601,43 @@ td {
   .focus-card,
   .skills-card,
   .highlights-section {
-    margin-top: 16px;
+    margin-top: 18px;
   }
 
   .page-wrapper {
-    padding: 18px 16px 36px;
+    padding: 18px 0 36px;
   }
 
-  .hero {
-    padding: 22px;
+  .section-head {
+    justify-content: flex-start;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+  .section-head h2 {
+    font-size: 1.6rem;
   }
 
-  .button,
-  .button-secondary {
-    width: 100%;
-  }
-
-  .photo-frame {
-    width: 260px;
+  .focus-grid,
+  .highlights-section {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 560px) {
   .page-wrapper {
-    padding: 16px 12px 28px;
+    padding: 16px 0 28px;
   }
 
   .hero h1 {
     font-size: 2.4rem;
   }
 
-  .section-head h2 {
-    font-size: 1.7rem;
-  }
-
-  .hero-actions {
-    gap: 12px;
-  }
-
   .main-nav a {
-    padding: 10px 10px;
-    font-size: 0.88rem;
+    flex: 1 1 100%;
+    font-size: 0.92rem;
   }
 
   .photo-frame {
-    width: 220px;
+    width: min(100%, 240px);
   }
 
   th,
@@ -664,12 +652,16 @@ td {
   }
 
   .side-panel {
-    padding: 20px;
+    padding: 18px;
   }
 
   .hero {
-    padding: 20px;
+    padding: 18px;
     gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
   }
 
   .button,
@@ -677,11 +669,7 @@ td {
     width: 100%;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
   .photo-frame {
-    width: 200px;
+    width: min(100%, 210px);
   }
 }
