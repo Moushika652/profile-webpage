@@ -416,6 +416,71 @@ body::after {
   gap: 16px;
 }
 
+.projects-page-heading {
+  padding: 34px 8px 12px;
+}
+
+.projects-page-heading .eyebrow {
+  margin: 0 0 10px;
+  color: #9ad7ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.projects-page-heading h1 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.projects-page-heading p:last-child {
+  max-width: 62ch;
+  margin: 0;
+  color: #c8daf1;
+  line-height: 1.8;
+}
+
+.projects-page .projects-card {
+  margin-top: 0;
+}
+
+.projects-page .projects-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+}
+
+.project-card .project-description {
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.project-tags span {
+  padding: 5px 9px;
+  border: 1px solid rgba(159, 212, 255, 0.2);
+  border-radius: 999px;
+  color: #bcd6f3;
+  font-size: 0.78rem;
+}
+
+.projects-teaser {
+  margin: 0;
+  color: #c7d9f2;
+  line-height: 1.7;
+}
+
 .focus-item,
 .project-card {
   padding: 18px;
@@ -426,6 +491,7 @@ body::after {
 }
 
 .focus-item h3,
+.project-card h2,
 .project-card h3 {
   margin: 0 0 8px;
   color: #f5fbff;
@@ -681,6 +747,10 @@ td {
   .focus-grid,
   .projects-grid,
   .highlights-section {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-page .projects-grid {
     grid-template-columns: 1fr;
   }
 }
