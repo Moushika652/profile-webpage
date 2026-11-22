@@ -11,21 +11,7 @@ A small, static personal portfolio with a profile page and project page. This RE
 - `README.md` — this file.
 
 ## Preview
-Open `index.html` in any modern browser (Chrome, Edge, Firefox, Safari) to view the webpage. You can double-click the file or serve it with a simple static server.
-
-### Serve locally (recommended)
-If you have Python installed, run from the project folder:
-
-```bash
-python -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
-
-Or, with Node.js installed, using `npx`:
-
-```bash
-npx http-server -p 8000
-```
+Open `index.html` in any modern browser (Chrome, Edge, Firefox, or Safari). You can double-click the file; no server or command is required. The Projects link opens `projects.html` from the same folder.
 
 ## How to customize
 - Edit `index.html` to change text, add sections, or update links.
