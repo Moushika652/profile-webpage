@@ -1,10 +1,13 @@
 # Personal Profile Webpage
 
-A small, static personal profile website consisting of a single page with markup (`index.html`) and styles (`style.css`). This README explains the project structure, how to view the page locally, and how to customize it.
+A small, static personal portfolio with a profile page and project page. This README explains the project structure, how to view the site locally, and how to customize it.
 
 ## Project structure
-- `index.html` — the single-page HTML for the profile site.
-- `style.css` — CSS styles used by the page.
+- `index.html` — profile, design-intern introduction, and contact links.
+- `projects.html` — selected projects and repository links.
+- `style.css` — shared responsive styles and visual effects.
+- `interactions.js` — shared scroll reveals and pointer-based portrait tilt.
+- `profile.jpeg` — profile portrait used on the home page.
 - `README.md` — this file.
 
 ## Preview
