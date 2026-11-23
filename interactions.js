@@ -1,5 +1,31 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const networkStatus = document.createElement("div");
+networkStatus.className = "network-status";
+networkStatus.setAttribute("role", "status");
+networkStatus.setAttribute("aria-live", "polite");
+document.body.appendChild(networkStatus);
+
+function updateNetworkStatus() {
+  const isOffline = !navigator.onLine;
+  networkStatus.classList.toggle("is-offline", isOffline);
+  networkStatus.textContent = isOffline
+    ? "You are offline. The saved portfolio pages are still available."
+    : "";
+}
+
+window.addEventListener("offline", updateNetworkStatus);
+window.addEventListener("online", updateNetworkStatus);
+updateNetworkStatus();
+
+if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Offline support could not be enabled:", error);
+    });
+  });
+}
+
 if (!reduceMotion && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {

@@ -1,0 +1,9 @@
+{
+  "name": "Moushika M - Design Portfolio",
+  "short_name": "Moushika",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbf8f3",
+  "theme_color": "#fbf8f3",
+  "description": "Portfolio and projects of Moushika M"
+}
